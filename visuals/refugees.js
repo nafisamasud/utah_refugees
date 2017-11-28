@@ -209,7 +209,7 @@ var svg = d3.select("#chart").append("svg")
 //
 // Load data
 // 
-d3.tsv("countries.tsv", type, function(error, data_all) {
+d3.tsv("https://rawgit.com/nafisamasud/utah_refugees/master/visuals/countries.tsv", type, function(error, data_all) {
 	
 	// Filter to just males or females
 	var data_filtered = data_all.filter(function(d) { return d.gender === USER_DEMO; });
