@@ -148,7 +148,7 @@ var places_meta = {'AB': {'descrip': 'na', 'show_label': 0, 'name': 'United Arab
 //
 // Margins
 // 
-var margin = {top: 10, right: 15, bottom: 30, left: 40},
+var margin = {top: 10, right: 25, bottom: 30, left: 50},
     width = 780 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom,
 	percent = d3.format('%');
