@@ -1,0 +1,17 @@
+library(tidyverse)
+library(scales)
+library("reshape2")
+library("ggplot2")
+df <- read.csv('RefugeeDataP1csv.csv')
+ggplot(data = df, aes(x=CY)) + geom_line(aes(colour=Culture), color= "gray")
+ggplot(df,aes(x=CY)) + geom_line(stat='count', size=0.75) +
+  annotate("text", x = 2011, y = 810, label = "Obama administration briefly suspends Iraqi refugee requests", size = 3, color="blue") +
+  annotate("text", x = 2009, y = 1535, label = "Major displacement in Pakistan, Somalia, and Burma", size = 3, color="blue") +
+  annotate("text", x = 2015, y = 1620, label = "Trump proposes to lower refugee cap", size = 3, color="blue") +
+  scale_y_continuous(breaks = seq(0, 1600, by = 100)) +
+  scale_x_continuous(breaks = seq(2006, 2017, by = 1)) +
+  ggtitle("Utah Refugee Trends Reflect World Events") +
+  xlab("Year") + ylab("Number of Refugees") +
+  theme(panel.background = element_blank()) +
+  theme(panel.border = element_blank()) 
+
